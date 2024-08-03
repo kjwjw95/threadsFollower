@@ -20,7 +20,7 @@
     .container {
         display: flex;
         width: 100%;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         height: auto; /* Adjusted for better spacing */
     }
@@ -96,7 +96,7 @@
             const aText = document.getElementById('aText').value;
             const bText = document.getElementById('bText').value;
             const uniqueIds = findUniqueIds(aText, bText);
-            const resultText = "검사 결과:\n" + uniqueIds.join("\n");
+            const resultText = "검사 결과\n" + uniqueIds.join("\n");
             document.getElementById('result').textContent = resultText;
         }
     </script>
