@@ -63,7 +63,7 @@
     #result {
         font-size: 18px;
         white-space: pre-wrap;
-        max-height: 200px;
+        max-height: 300px;
         overflow-y: auto;
         width: 80%;
         text-align: center;
@@ -77,7 +77,7 @@
             <h1>팔로워</h1>
             <textarea id="bText" placeholder="팔로워를 입력하세요."></textarea>
         </div>
-        <div id="result">결과가 여기에 표시됩니다.</div>
+        <div id="result">검사 결과</div>
         <div class="section">
             <h1>팔로잉</h1>
             <textarea id="aText" placeholder="팔로잉을 입력하세요"></textarea>
@@ -102,7 +102,7 @@
             const aText = document.getElementById('aText').value;
             const bText = document.getElementById('bText').value;
             const uniqueIds = findUniqueIds(aText, bText);
-            const resultText = "검사 결과\n" + uniqueIds.join("\n");
+            const resultText = "검사 결과\n\n" + uniqueIds.join("\n");
             document.getElementById('result').textContent = resultText;
         }
     </script>
