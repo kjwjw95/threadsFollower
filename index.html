@@ -2,30 +2,40 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>Follow Page</title>
+<title>맞팔 검사기</title>
 <style>
     body {
         background-color: #181818;
         color: white;
         font-family: Arial, sans-serif;
         margin: 0;
+        padding-top: 20px; /* Top padding for the title */
         height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
         text-align: center;
+        flex-direction: column;
     }
-    input[type="text"], button {
+    .container {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        height: auto; /* Adjusted for better spacing */
+    }
+    textarea, button {
         width: 200px;
         padding: 10px;
         margin-top: 10px;
         border: none;
         border-radius: 5px;
     }
-    input[type="text"] {
+    textarea {
         background-color: #333;
         color: white;
+        height: 100px; /* Adjustable height for textarea */
+        resize: none; /* Disables resizing */
     }
     button {
         background-color: #4CAF50;
@@ -33,22 +43,31 @@
         cursor: pointer;
     }
     h1 {
-        margin: 20px 0 0;
+        margin: 20px 0 10px;
         font-size: 24px;
     }
+    .title {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 50px; /* Space below the title */
+    }
     .section {
-        margin-bottom: 20px;
+        flex-grow: 1; /* Ensures equal width */
+        padding: 20px; /* Spacing around content */
     }
 </style>
 </head>
 <body>
-    <div class="section">
-        <h1>팔로워</h1>
-        <input type="text" placeholder="팔로워 검색">
-    </div>
-    <div class="section">
-        <h1>팔로잉</h1>
-        <input type="text" placeholder="팔로잉 검색">
+    <div class="title">맞팔 검사기</div>
+    <div class="container">
+        <div class="section">
+            <h1>팔로워</h1>
+            <textarea placeholder="팔로워 검색"></textarea>
+        </div>
+        <div class="section">
+            <h1>팔로잉</h1>
+            <textarea placeholder="팔로잉 검색"></textarea>
+        </div>
     </div>
     <button onclick="alert('작업 시작!')">시작하기</button>
 </body>
