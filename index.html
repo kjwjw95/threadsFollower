@@ -22,7 +22,7 @@
         width: 100%;
         justify-content: center;
         align-items: center;
-        height: auto; /* Adjusted for better spacing */
+        flex-direction: column;
     }
     textarea, button {
         width: 200px;
@@ -62,8 +62,10 @@
         color: white;
         font-size: 24px;
         white-space: pre-wrap;
-        max-height: 9000px; /* Maximum height for result container */
+        max-height: 300px; /* Maximum height for result container */
         overflow-y: auto; /* Enable vertical scroll */
+        width: 80%; /* Set width to fit within container */
+        text-align: center;
     }
 </style>
 </head>
