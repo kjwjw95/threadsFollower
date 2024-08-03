@@ -10,12 +10,12 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding-top: 20px; /* Top padding for the title */
-        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
         flex-direction: column;
+        overflow: hidden; /* Hide overflow */
     }
     .container {
         display: flex;
@@ -74,13 +74,13 @@
             <h1>팔로워</h1>
             <textarea id="bText" placeholder="팔로워를 입력하세요."></textarea>
         </div>
+        <div id="result"></div>
         <div class="section">
             <h1>팔로잉</h1>
             <textarea id="aText" placeholder="팔로잉을 입력하세요"></textarea>
         </div>
     </div>
     <button onclick="findAndDisplayUniqueIds()">검사시작</button>
-    <div id="result"></div>
     <script>
         function parseList(text) {
             const lines = text.trim().split('\n');
