@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>Sample Page</title>
+<title>Follow Page</title>
 <style>
     body {
         background-color: #181818;
@@ -14,15 +14,42 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        text-align: center;
+    }
+    input[type="text"], button {
+        width: 200px;
+        padding: 10px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 5px;
+    }
+    input[type="text"] {
+        background-color: #333;
+        color: white;
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
     }
     h1 {
-        margin: 10px 0;
+        margin: 20px 0 0;
         font-size: 24px;
+    }
+    .section {
+        margin-bottom: 20px;
     }
 </style>
 </head>
 <body>
-    <h1>팔로워</h1>
-    <h1>팔로잉</h1>
+    <div class="section">
+        <h1>팔로워</h1>
+        <input type="text" placeholder="팔로워 검색">
+    </div>
+    <div class="section">
+        <h1>팔로잉</h1>
+        <input type="text" placeholder="팔로잉 검색">
+    </div>
+    <button onclick="alert('작업 시작!')">시작하기</button>
 </body>
 </html>
